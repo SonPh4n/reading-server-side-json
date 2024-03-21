@@ -1,7 +1,7 @@
 const getJSON = async () => {
     try{
-        let response = await fetch("http://localhost:3000/api/crafts");
-        // let response = await fetch("https://reading-server-side-json-clb5.onrender.com/api/crafts");
+        // let response = await fetch("http://localhost:3000/api/crafts");
+        let response = await fetch("https://reading-server-side-json-clb5.onrender.com/api/crafts");
         return await response.json();
     } catch(error){
         console.log("error retrieving json");
