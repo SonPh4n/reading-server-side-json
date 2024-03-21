@@ -31,7 +31,7 @@ const showCrafts = async () => {
         let img = document.createElement("img");
         section.append(img);
         // img.src="http://localhost:3000/images/crafts/" + craft.image; 
-        img.src="https://reading-server-side-json-clb5.onrender.com/" + craft.image; 
+        img.src="https://reading-server-side-json-clb5.onrender.com/public/images/crafts" + craft.image; 
 
 
         let description = document.createElement("p");
