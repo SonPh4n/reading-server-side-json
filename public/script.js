@@ -1,6 +1,7 @@
 const getJSON = async () => {
     try{
-        let response = await fetch("https://reading-server-side-json-clb5.onrender.com/api/crafts");
+        let response = await fetch("http://localhost:3000/api/crafts");
+        // let response = await fetch("https://reading-server-side-json-clb5.onrender.com/api/crafts");
         return await response.json();
     } catch(error){
         console.log("error retrieving json");
@@ -29,10 +30,17 @@ const showCrafts = async () => {
 
         let img = document.createElement("img");
         section.append(img);
+        // img.src="http://localhost:3000/images/crafts/" + craft.image; 
+        img.src="https://reading-server-side-json-clb5.onrender.com/" + craft.image; 
+
 
         let description = document.createElement("p");
         section.append(description);
-        img.src="https://reading-server-side-json-clb5.onrender.com/" + craft.image;
+        description.innerHTML = craft.description;
+
+        // let supplies = document.createElement("ul");
+        // section.append(ul);
+
     });
 };
 
